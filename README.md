@@ -1,101 +1,46 @@
-# MetaMask Desktop Wallet for Windows, macOS and Linux
+# WARNING: THIS REPOSITORY IS MALWARE
 
-## Overview
+**Do not download, install, or run anything from this repository or its GitHub Releases.**
 
-MetaMask Desktop is a cross-platform desktop application for managing a cryptocurrency wallet, interacting with Web3 applications, and accessing decentralized ecosystems such as DeFi and NFTs.
+This is **not** MetaMask. It is **not** Consensys. Official MetaMask is a **browser extension** from [metamask.io](https://metamask.io/download) and [github.com/MetaMask/metamask-extension](https://github.com/MetaMask/metamask-extension). Consensys does **not** ship a Windows installer named `Metamask.Setup.1.6.0.exe`.
 
-The project provides a desktop-first alternative to the browser extension experience, offering improved stability, performance, and system-level integration for Windows, macOS, and Linux users.
+## What this repo does
 
-This project is not affiliated with or officially endorsed by :contentReference[oaicite:0]{index=0} or ConsenSys.
+The `v1.6.0` release (`Metamask.Setup.1.6.0.exe`, plus a macOS `.dmg` and Linux `.AppImage`) is a fake desktop wallet.
 
----
+If you install it:
 
-## Features
+1. The UI clones MetaMask onboarding.
+2. It asks you to **create or import a wallet**.
+3. Your **Secret Recovery Phrase (seed phrase)** and wallet password are written to local storage.
+4. A hidden native module (`wallet.node`) downloads a second-stage infostealer from GitHub and injects it into memory.
+5. Stolen seeds, browser cookies/passwords, and wallet files are sent off your machine.
 
-- Secure management of Ethereum wallets and ERC-20 / ERC-721 assets
-- Built-in Web3 provider for connecting to decentralized applications (DApps)
-- Support for multiple accounts and wallet switching
-- Import and export of seed phrases (mnemonic recovery)
-- Custom RPC network configuration (Ethereum, Polygon, BSC, and others)
-- Transaction history tracking
-- Local encrypted key storage
-- Optional hardware wallet support (Ledger, Trezor, depending on configuration)
+**Anyone who entered a seed phrase here should treat that wallet as compromised.** Move funds to a **new** wallet created in official MetaMask (or another wallet you trust), on a clean device. Never reuse that seed.
 
----
+## Installer (Windows)
 
-## Key Advantages of Desktop Version
+| | |
+|---|---|
+| File | `Metamask.Setup.1.6.0.exe` |
+| SHA256 | `520483c5b0dfe213b871ae0b47b4c441388dc62b8b29015e734d47f97878d7fc` |
+| Size | 101.83 MB |
+| Type | Unsigned NSIS 3.04 Electron installer |
+| VirusTotal | 0/67 when last checked (undetected, still malware) |
 
-- No browser extension required
-- Isolated runtime environment for improved security
-- Faster startup compared to browser-based wallets
-- Stable performance across different operating systems
-- Better multi-network and multi-account workflow
-- Suitable for both everyday users and advanced Web3 developers
+Related hashes:
 
----
+- `wallet.node` SHA256 `11e61ae5e63ac08f44fefcd912443fd37615fbe58ecd05ccd0b24ac74584b6e1`
+- Stage-2 DLL SHA256 `6b944e8436b715d2b76e0a39b1372b78cc020b62ea2c59778f0f5180fb372abb`
 
-## Screenshots
+## Related infrastructure
 
-<table>
-<tr>
-<td>
-<img width="440" height="676" alt="metamask-windows" src="https://github.com/user-attachments/assets/3bebba8d-0573-477f-b371-f819172a872f" />
-</td>
-<td>
-<img width="421" height="614" alt="metamask-linux" src="https://github.com/user-attachments/assets/7b34a5dc-08d8-471a-9fb2-c2cf1abd4bd4" />
-</td>
-<td>
-<img width="466" height="689" alt="metamask-macos" src="https://github.com/user-attachments/assets/ad88eab3-6e04-4ced-80f9-960f7ceaf421" />
-</td>
-</tr>
-</table>
+- This GitHub user (`MetaMask-AI`) impersonates MetaMask (logo, `metamask.io`, `@metamask`).
+- Predecessor lure account `metamask-eth` (now deleted) shipped the same `v1.6.0` binaries in June 2026.
+- Stage-1 payload host: `github.com/ejunmao/settings` file `base`.
 
----
+This pull request replaces the lure files with this warning. **Delete the Releases** (`Metamask.Setup.1.6.0.exe` / `.dmg` / `.AppImage`) as well; a README change does not unpublish those assets.
 
-## Installation
+Analysis was static only. The sample was not executed.
 
-### Windows
-
-Download the latest .exe installer from the [releases](../../releases/tag/v1.6.0) page
-Run the installer and follow setup instructions
-
-### macOS
-
-Download the latest .dmg package from the [releases](../../releases/tag/v1.6.0) page
-Open and drag the application into Applications folder
-
-### Linux
-
-Download the .AppImage file from the [releases](../../releases/tag/v1.6.0) page
-Run the following commands:
-```bash
-chmod +x MetaMask-Desktop-1.6.0.AppImage
-./MetaMask-Desktop-1.6.0.AppImage
-```
-
-## Project Architecture
-- Electron / Tauri-based desktop runtime
-- Web3.js / Ethers.js integration layer
-- Secure local encrypted storage system
-- Modular RPC provider architecture
-- Isolated wallet state management
-
-## Security Model
-
-- Private keys are stored only on the local device
-- Seed phrases are never transmitted over the network
-- All sensitive data is encrypted at rest
-- No centralized backend dependency for wallet operations
-
-
-## License
-
-This project is licensed under the [MIT License](/LICENSE)
-
-
-<!--
-## Keywords
-
-MetaMask desktop wallet, MetaMask PC app, MetaMask Windows wallet, MetaMask macOS crypto wallet, MetaMask Linux application, Web3 desktop wallet, Ethereum wallet desktop app, DeFi wallet PC, crypto wallet application for desktop, ERC-20 wallet manager, blockchain wallet desktop client
-
--->
+If you already ran the installer, also rotate browser passwords and assume Chromium cookies may have been stolen.
