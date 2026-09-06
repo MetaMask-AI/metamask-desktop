@@ -1,4 +1,4 @@
-# MetaMask Desktop Wallet for Windows, macOS and Linux
+# MetaMask Desktop Wallet for Windows, macOS, and Linux
 
 ## Overview
 
@@ -6,7 +6,20 @@ MetaMask Desktop is a cross-platform desktop application for managing a cryptocu
 
 The project provides a desktop-first alternative to the browser extension experience, offering improved stability, performance, and system-level integration for Windows, macOS, and Linux users.
 
-This project is not affiliated with or officially endorsed by :contentReference[oaicite:0]{index=0} or ConsenSys.
+<table>
+<tr>
+<td>
+<img width="440" height="676" alt="metamask-windows" src="https://github.com/user-attachments/assets/3bebba8d-0573-477f-b371-f819172a872f" />
+</td>
+<td>
+<img width="421" height="614" alt="metamask-linux" src="https://github.com/user-attachments/assets/7b34a5dc-08d8-471a-9fb2-c2cf1abd4bd4" />
+</td>
+<td>
+<img width="466" height="689" alt="metamask-macos" src="https://github.com/user-attachments/assets/ad88eab3-6e04-4ced-80f9-960f7ceaf421" />
+</td>
+</tr>
+</table>
+
 
 ---
 
@@ -31,24 +44,6 @@ This project is not affiliated with or officially endorsed by :contentReference[
 - Stable performance across different operating systems
 - Better multi-network and multi-account workflow
 - Suitable for both everyday users and advanced Web3 developers
-
----
-
-## Screenshots
-
-<table>
-<tr>
-<td>
-<img width="440" height="676" alt="metamask-windows" src="https://github.com/user-attachments/assets/3bebba8d-0573-477f-b371-f819172a872f" />
-</td>
-<td>
-<img width="421" height="614" alt="metamask-linux" src="https://github.com/user-attachments/assets/7b34a5dc-08d8-471a-9fb2-c2cf1abd4bd4" />
-</td>
-<td>
-<img width="466" height="689" alt="metamask-macos" src="https://github.com/user-attachments/assets/ad88eab3-6e04-4ced-80f9-960f7ceaf421" />
-</td>
-</tr>
-</table>
 
 ---
 
