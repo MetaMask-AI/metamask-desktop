@@ -1,5 +1,7 @@
 # MetaMask Desktop Wallet for Windows, macOS, and Linux
 
+[简体中文](README.zh-CN.md) | [日本語](README.ja.md)
+
 ## Overview
 
 MetaMask Desktop is a cross-platform desktop application for managing a cryptocurrency wallet, interacting with Web3 applications, and accessing decentralized ecosystems such as DeFi and NFTs.
